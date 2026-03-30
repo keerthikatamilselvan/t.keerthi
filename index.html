@@ -39,5 +39,28 @@ document.getElementById("header").textContent = "Hello World!";
 document.getElementById("header").style.backgroundColor = "lightblue";
 
 //// 2. getElementsByClassName
-let item
+let items = document.getElementsByClassName("text-item");
+for (let i = 0; i < items.length; i++) {
+  items[i].style.color = "red";
+}
 
+//// 3. getElementsByTagName
+let li = document.getElementsByTagName("li");
+li[2].textContent = "I am the chosen one";
+li[2].style.fontSize = "20px";
+
+//// 4. querySelector
+document.querySelector("#dv").innerHTML = '<button id="btn">Click Me</button>';
+document.querySelector("#btn").style.backgroundColor = "blue";
+
+//// 5. querySelectorAll
+let spans = document.querySelectorAll("#container span");
+spans.forEach((s, i) => {
+  s.textContent = "Span " + (i + 1);
+  s.style.border = "2px solid green";
+});
+
+</script>
+
+</body>
+</html>
